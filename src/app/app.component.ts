@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Directivas en Angular';
-  login = false;
+  meriendas = ['oreo','kinder', 'kit kat', 'filipinos'];
 }
