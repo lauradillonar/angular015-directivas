@@ -1,6 +1,5 @@
-<div *ngIf="meriendas.length > 0; else nohayMeriendas">
-  Hay meriendas: {{ meriendas }}
-</div>
-<div *ngIf="!meriendas.length">No hay meriendas</div>
+<div *ngIf="meriendas.length > 0; then hayMeriendas; else nohayMeriendas"></div>
+
+<ng-template #hayMeriendas>Hay meriendas: {{ meriendas }}</ng-template>
 
 <ng-template #nohayMeriendas>No hay meriendas</ng-template>
