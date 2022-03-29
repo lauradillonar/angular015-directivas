@@ -1,12 +1,7 @@
-<div [hidden]="arr.length > 0">DIV1 (vacío)</div>
+<div [hidden]="true">DIV1 (vacío)</div>
 
-<div [hidden]="arr.length === 0">
+<div *ngIf="false">
   DIV2<br />
   {{ arr }} <br />
   tamaño: {{ arr.length }}
 </div>
-
-<hr />
-La condición del DIV1 devuelve {{ arr.length > 0 }}
-<br />
-La condición del DIV2 devuelve {{ arr.length === 0 }}
