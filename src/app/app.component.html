@@ -16,5 +16,6 @@
 <ul>
   <li *ngFor="let carta of cartas">
     Palo: {{ carta.palo }} <br />Carta: {{ carta.valor }} {{ carta.icono }}
+    <button (click)="eliminar(carta)">Eliminar</button>
   </li>
 </ul>
