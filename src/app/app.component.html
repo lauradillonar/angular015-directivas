@@ -1,5 +1,20 @@
+<select [(ngModel)]="palo">
+  <option value="corazones">Corazones</option>
+  <option value="picas">Picas</option>
+  <option value="diamantes">Diamantes</option>
+  <option value="trebol">Trebol</option>
+</select>
+<input type="text" [(ngModel)]="valor" />
+<select [(ngModel)]="icono">
+  <option value="corazones">&hearts;</option>
+  <option value="picas">&spades;</option>
+  <option value="diamantes">&diams;</option>
+  <option value="trebol">&clubs;</option>
+</select>
+<button (click)="saveItem()">Añadir</button>
+
 <ul>
   <li *ngFor="let carta of cartas">
-    Palo: {{ carta.palo }} <br />Carta: {{ carta.valor }}
+    Palo: {{ carta.palo }} <br />Carta: {{ carta.valor }} {{ carta.icono }}
   </li>
 </ul>
