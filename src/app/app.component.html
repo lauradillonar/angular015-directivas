@@ -1,5 +1,12 @@
-<div *ngIf="meriendas.length > 0; then hayMeriendas; else nohayMeriendas"></div>
+<div [hidden]="arr.length > 0">DIV1 (vacío)</div>
 
-<ng-template #hayMeriendas>Hay meriendas: {{ meriendas }}</ng-template>
+<div [hidden]="arr.length === 0">
+  DIV2<br />
+  {{ arr }} <br />
+  tamaño: {{ arr.length }}
+</div>
 
-<ng-template #nohayMeriendas>No hay meriendas</ng-template>
+<hr />
+La condición del DIV1 devuelve {{ arr.length > 0 }}
+<br />
+La condición del DIV2 devuelve {{ arr.length === 0 }}
