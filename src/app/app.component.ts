@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Directivas en Angular';
-  cartas = ['sota','caballo','rey'];
+  cartas = [
+    {palo: 'corazones', valor: 'A'},
+    {palo: 'picas', valor: '3'},
+    {palo: 'diamantes', valor: 'K'},
+    {palo: 'trebol', valor: 'Q'}
+  ];
 }
