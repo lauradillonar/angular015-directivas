@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Directivas en Angular';
-  arr = [1, 2, 3];
+  cartas = ['sota','caballo','rey'];
 }

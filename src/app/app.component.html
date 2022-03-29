@@ -1,7 +1,3 @@
-<div [hidden]="true">DIV1 (vacío)</div>
-
-<div *ngIf="false">
-  DIV2<br />
-  {{ arr }} <br />
-  tamaño: {{ arr.length }}
-</div>
+<ul>
+  <li *ngFor="let carta of cartas">{{ carta }}</li>
+</ul>
