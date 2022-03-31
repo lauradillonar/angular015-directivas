@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 
-interface Icono {
-  icono: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,10 +8,5 @@ interface Icono {
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  cartas: Icono[] = [
-    {icono: '♥'},  //  &hearts;
-    {icono: '♠'},  //  &spades;
-    {icono: '♦'},  //  &diams;
-    {icono: '♣'}   //  &clubs;
-  ];
+  isLoggedIn = true;
 }

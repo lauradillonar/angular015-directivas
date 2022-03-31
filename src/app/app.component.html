@@ -1,14 +1,5 @@
-<ul *ngFor="let carta of cartas" [ngSwitch]="carta.icono">
-  <li *ngSwitchCase="'♥'" [style.color]="'red'">
-    {{ carta.icono }} = Rojo de Corazones
-  </li>
-  <li *ngSwitchCase="'♦'" [style.color]="'red'">
-    {{ carta.icono }} = Rojo de Diamantes
-  </li>
-  <li *ngSwitchCase="'♠'" [style.color]="'negro'">
-    {{ carta.icono }} = Negro de Picas
-  </li>
-  <li *ngSwitchCase="'♣'" [style.color]="'negro'">
-    {{ carta.icono }} = Negro de Trébol
-  </li>
-</ul>
+<div *ngIf="isLoggedIn">Hola</div>
+
+<ng-template [ngIf]="isLoggedIn">
+  <div>Hola</div>
+</ng-template>
