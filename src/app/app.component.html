@@ -5,5 +5,17 @@
   [style.paddingLeft]="activo ? '20px' : '0px'"
   [style.paddingRight]="activo ? '0px' : '20px'"
 >
-  Mi div
+  Mi div 1
+</div>
+
+<div
+  [ngStyle]="{
+    backgroundColor: activo ? 'green' : 'red',
+    color: activo ? 'yellow' : 'white',
+    textAlign: activo ? 'right' : 'left',
+    paddingLeft: activo ? '0px' : '20px',
+    paddingRight: activo ? '20px' : '0px'
+  }"
+>
+  Mi div 2
 </div>
