@@ -1,5 +1,9 @@
-<div *ngIf="isLoggedIn">Hola</div>
-
-<ng-template [ngIf]="isLoggedIn">
-  <div>Hola</div>
-</ng-template>
+<div
+  [style.backgroundColor]="activo ? 'red' : 'green'"
+  [style.color]="activo ? 'white' : 'yellow'"
+  [style.textAlign]="activo ? 'left' : 'right'"
+  [style.paddingLeft]="activo ? '20px' : '0px'"
+  [style.paddingRight]="activo ? '0px' : '20px'"
+>
+  Mi div
+</div>
