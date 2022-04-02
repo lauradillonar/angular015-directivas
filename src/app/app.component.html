@@ -1,26 +1,14 @@
 <ul *ngFor="let carta of cartas" [ngSwitch]="carta.icono">
-  <li
-    *ngSwitchCase="'♥'"
-    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
-  >
+  <li *ngSwitchCase="'♥'" [ngStyle]="{ color: getColor(false) }">
     {{ carta.icono }} = Rojo de Corazones
   </li>
-  <li
-    *ngSwitchCase="'♦'"
-    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
-  >
+  <li *ngSwitchCase="'♦'" [ngStyle]="{ color: getColor(false) }">
     {{ carta.icono }} = Rojo de Diamantes
   </li>
-  <li
-    *ngSwitchCase="'♠'"
-    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
-  >
+  <li *ngSwitchCase="'♠'" [ngStyle]="{ color: getColor(false) }">
     {{ carta.icono }} = Negro de Picas
   </li>
-  <li
-    *ngSwitchCase="'♣'"
-    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
-  >
+  <li *ngSwitchCase="'♣'" [ngStyle]="{ color: getColor(randomColor) }">
     {{ carta.icono }} = Negro de Trébol
   </li>
 </ul>

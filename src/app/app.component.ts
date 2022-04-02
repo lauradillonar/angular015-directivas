@@ -20,9 +20,13 @@ export class AppComponent {
   ];
   randomColor = true;
 
-  getColor(): string {
-    const color = Math.floor(Math.random() * 16777215).toString(16);
-    console.log(color);
-    return '#'+color;
+  getColor(param: boolean): string {
+    if (param === true){
+      const color = Math.floor(Math.random() * 16777215).toString(16);
+      console.log(color);
+      return '#'+color;
+    }else{
+      return 'black';
+    }
   }
 }
