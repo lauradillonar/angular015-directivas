@@ -12,5 +12,5 @@ interface Icono {
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  
+  clases = ['color-fondo', 'color-fuente', 'tamanio-fuente', 'border-margin'];
 }
