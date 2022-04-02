@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+interface Icono {
+  icono: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -8,5 +12,17 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  activo = true;
+  cartas: Icono[] = [
+    {icono: '♥'},  //  &hearts;
+    {icono: '♠'},  //  &spades;
+    {icono: '♦'},  //  &diams;
+    {icono: '♣'}   //  &clubs;
+  ];
+  randomColor = true;
+
+  getColor(): string {
+    const color = Math.floor(Math.random() * 16777215).toString(16);
+    console.log(color);
+    return '#'+color;
+  }
 }

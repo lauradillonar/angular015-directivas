@@ -1,21 +1,26 @@
-<div
-  [style.backgroundColor]="activo ? 'red' : 'green'"
-  [style.color]="activo ? 'white' : 'yellow'"
-  [style.textAlign]="activo ? 'left' : 'right'"
-  [style.paddingLeft]="activo ? '20px' : '0px'"
-  [style.paddingRight]="activo ? '0px' : '20px'"
->
-  Mi div 1
-</div>
-
-<div
-  [ngStyle]="{
-    backgroundColor: activo ? 'green' : 'red',
-    color: activo ? 'yellow' : 'white',
-    textAlign: activo ? 'right' : 'left',
-    paddingLeft: activo ? '0px' : '20px',
-    paddingRight: activo ? '20px' : '0px'
-  }"
->
-  Mi div 2
-</div>
+<ul *ngFor="let carta of cartas" [ngSwitch]="carta.icono">
+  <li
+    *ngSwitchCase="'♥'"
+    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
+  >
+    {{ carta.icono }} = Rojo de Corazones
+  </li>
+  <li
+    *ngSwitchCase="'♦'"
+    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
+  >
+    {{ carta.icono }} = Rojo de Diamantes
+  </li>
+  <li
+    *ngSwitchCase="'♠'"
+    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
+  >
+    {{ carta.icono }} = Negro de Picas
+  </li>
+  <li
+    *ngSwitchCase="'♣'"
+    [ngStyle]="{ color: randomColor ? getColor() : 'black' }"
+  >
+    {{ carta.icono }} = Negro de Trébol
+  </li>
+</ul>
