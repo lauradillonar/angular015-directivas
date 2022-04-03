@@ -10,14 +10,22 @@ export class ColorPickerDirective {
   }
 
   @HostListener('dblclick') dobleclick():void{
-    this.miElemento.nativeElement.style.backgroundColor = 'red';
-    this.miElemento.nativeElement.style.color = 'black';
+    this.changeBackGround('red');
+    this.changeColor ('black');
     console.log('%c' + 'Has hecho doble click', 'color:red');
   }
 
   @HostListener('click') oneClick():void{
-    this.miElemento.nativeElement.style.backgroundColor = 'blue';
-    this.miElemento.nativeElement.style.color = 'white';
+    this.changeBackGround ('blue');
+    this.changeColor('white');
     console.log('%c'+ 'Has hecho un click', 'color:blue');
+  }
+
+  changeBackGround(color: string):void{
+    this.miElemento.nativeElement.style.backgroundColor = color;
+  }
+
+  changeColor(color: string):void{
+    this.miElemento.nativeElement.style.color = color;
   }
 }
