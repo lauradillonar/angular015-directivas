@@ -1,1 +1,10 @@
-<div [ngClass]="clases">Contenido del div</div>
+<div
+  [ngClass]="{
+    'color-fondo': bgClass,
+    'color-fuente': colorClass,
+    'tamanio-fuente': tamanioClass,
+    'border-margin': borderMarginClass
+  }"
+>
+  Contenido del div
+</div>
