@@ -1,23 +1,59 @@
 <div>
-  <h3>Selecciona un color de fondo:</h3>
-  <input type="radio" name="'colors" value="Rojo" (click)="bgColor = 'red'" />
+  <h3>Selecciona un color de fondo: {{ propertiesDiv.bgColor }}</h3>
+  <input
+    type="radio"
+    name="'colors"
+    value="Rojo"
+    (click)="propertiesDiv.bgColor = 'red'"
+  />
   <label for="Rojo">Rojo</label>
   <input
     type="radio"
     name="'colors"
     value="Verde"
-    (click)="bgColor = 'green'"
+    (click)="propertiesDiv.bgColor = 'green'"
   />
   <label for="Verde">Verde</label>
   <input
     type="radio"
     name="'colors"
     value="Amarillo"
-    (click)="bgColor = 'yellow'"
+    (click)="propertiesDiv.bgColor = 'yellow'"
   />
   <label for="Amarillo">Amarillo</label>
-  <input type="radio" name="'colors" value="Azul" (click)="bgColor = 'blue'" />
+  <input
+    type="radio"
+    name="'colors"
+    value="Azul"
+    (click)="propertiesDiv.bgColor = 'blue'"
+  />
   <label for="Azul">Azul</label>
 </div>
+
+<div>
+  <h3>Selecciona un color de texto: {{ propertiesDiv.textColor }}</h3>
+  <input
+    type="radio"
+    name="'fontColors"
+    value="Negro"
+    (click)="propertiesDiv.textColor = 'black'"
+  />
+  <label for="Negro">Negro</label>
+  <input
+    type="radio"
+    name="'fontColors"
+    value="Verde"
+    (click)="propertiesDiv.textColor = 'green'"
+  />
+  <label for="Verde">Verde</label>
+  <input
+    type="radio"
+    name="'fontColors"
+    value="Amarillo"
+    (click)="propertiesDiv.textColor = 'yellow'"
+  />
+  <label for="Amarillo">Amarillo</label>
+</div>
+
 <br />
-<div [appColorPicker]="bgColor">Haz click aquí</div>
+<div [appColorPicker]="propertiesDiv">Haz click aquí</div>

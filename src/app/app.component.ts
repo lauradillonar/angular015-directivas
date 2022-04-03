@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-interface Fruta {
-  name: string;
-  icon: string;
+interface PropDiv {
+  bgColor: string;
+  textColor: string;
 }
 
 @Component({
@@ -14,5 +14,11 @@ interface Fruta {
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  bgColor = '';
+  propertiesDiv: {
+    bgColor: string,
+    textColor: string
+  } = {
+    bgColor: '',
+    textColor: ''
+  };
 }

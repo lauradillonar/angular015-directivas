@@ -6,22 +6,22 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class ColorPickerDirective {
   color = '';
 
-  @Input('appColorPicker') bgColor: string = '';
+  @Input('appColorPicker') propertiesDiv: {
+    bgColor: string,
+    textColor: string
+  } = {
+    bgColor: '',
+    textColor: ''
+  };
 
   constructor(private miElemento: ElementRef) { 
     console.log(miElemento);
     console.log("Directiva creada correctamente");
   }
 
-  @HostListener('dblclick') dobleclick():void{
-    this.changeBackGround(this.bgColor);
-    this.changeColor ('black');
-    console.log('%c' + 'Has hecho doble click', 'color:red');
-  }
-
   @HostListener('click') oneClick():void{
-    this.changeBackGround (this.bgColor);
-    this.changeColor('white');
+    this.changeBackGround (this.propertiesDiv.bgColor);
+    this.changeColor(this.propertiesDiv.textColor);
     console.log('%c'+ 'Has hecho un click', 'color:blue');
   }
 
