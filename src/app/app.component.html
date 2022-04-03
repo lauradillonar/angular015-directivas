@@ -1,14 +1,15 @@
 <ul>
   <li *ngFor="let fruta of frutas">
+    {{ index(fruta) }}
     <span
       [ngClass]="{
-        'color-fondo': frutas.length > 5,
-        'color-fuente': 'true',
-        'tamanio-fuente': frutas[0].name === 'Manzana Roja',
-        'border-margin': 5 > frutas.length
+        'color-fondo': bgClass,
+        'color-fuente': colorClass,
+        'tamanio-fuente': tamanioClass,
+        'border-margin': borderClass
       }"
     >
-      {{ fruta.icon }} {{ fruta.name }}
+      {{ fruta.icon }}
     </span>
   </li>
 </ul>
