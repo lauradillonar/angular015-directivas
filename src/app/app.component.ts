@@ -12,8 +12,14 @@ interface Icono {
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  bgClass = false;
-  colorClass = false;
-  tamanioClass = true;
-  borderMarginClass = true;
+  
+  frutas = [
+    {name:'Manzana Roja',icon:'🍎'},
+    {name:'Uvas',icon:'🍇'},
+    {name:'Platano',icon:'🍌'},
+    {name:'Fresa',icon:'🍓'},
+    {name:'Limon',icon:'🍋'},
+    {name:'Sandia',icon:'🍉'},
+    {name:'Naranja',icon:'🍊'}
+  ];
 }

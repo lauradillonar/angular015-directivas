@@ -1,10 +1,14 @@
-<div
-  [ngClass]="{
-    'color-fondo': bgClass,
-    'color-fuente': colorClass,
-    'tamanio-fuente': tamanioClass,
-    'border-margin': borderMarginClass
-  }"
->
-  Contenido del div
-</div>
+<ul>
+  <li *ngFor="let fruta of frutas">
+    <span
+      [ngClass]="{
+        'color-fondo': frutas.length > 5,
+        'color-fuente': 'true',
+        'tamanio-fuente': frutas[0].name === 'Manzana Roja',
+        'border-margin': 5 > frutas.length
+      }"
+    >
+      {{ fruta.icon }} {{ fruta.name }}
+    </span>
+  </li>
+</ul>
