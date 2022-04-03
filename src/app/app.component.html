@@ -1,1 +1,23 @@
-<div appColorPicker>Haz click aquí</div>
+<div>
+  <h3>Selecciona un color de fondo:</h3>
+  <input type="radio" name="'colors" value="Rojo" (click)="bgColor = 'red'" />
+  <label for="Rojo">Rojo</label>
+  <input
+    type="radio"
+    name="'colors"
+    value="Verde"
+    (click)="bgColor = 'green'"
+  />
+  <label for="Verde">Verde</label>
+  <input
+    type="radio"
+    name="'colors"
+    value="Amarillo"
+    (click)="bgColor = 'yellow'"
+  />
+  <label for="Amarillo">Amarillo</label>
+  <input type="radio" name="'colors" value="Azul" (click)="bgColor = 'blue'" />
+  <label for="Azul">Azul</label>
+</div>
+<br />
+<div [appColorPicker]="bgColor">Haz click aquí</div>

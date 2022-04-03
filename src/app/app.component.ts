@@ -14,4 +14,5 @@ interface Fruta {
 
 export class AppComponent {
   title = 'Directivas en Angular';
+  bgColor = '';
 }
