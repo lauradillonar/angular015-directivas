@@ -14,11 +14,5 @@ interface PropDiv {
 
 export class AppComponent {
   title = 'Directivas en Angular';
-  propertiesDiv: {
-    bgColor: string,
-    textColor: string
-  } = {
-    bgColor: '',
-    textColor: ''
-  };
+  propertiesDiv: string = '#dddddd';
 }
